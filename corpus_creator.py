@@ -5,7 +5,7 @@ import csv
 # ALL YOU HAVE TO DO IS FILLING HERE #
 ACCESS_KEY = ''
 SECRET_KEY = ''
-FILE_EXTENSION= '.dgn'
+FILE_EXTENSION= ''
 CSV_FILENAME=''
 # ----------- #
 
