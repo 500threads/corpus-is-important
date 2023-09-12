@@ -1,6 +1,7 @@
 # corpus-is-important
 
 First please read this AWESOME blog by Ben Hawkes : https://blog.isosceles.com/how-to-build-a-corpus-for-fuzzing/
+But there are two problems i faced. The content mime and corpus minimization. I am sharing my solution suggestions here so that you do not waste your time by dealing with these problems later.
 
 ## changing the last query
 
@@ -30,7 +31,7 @@ You need to download the output csv file.
 
 At the end of the blogpost Ben Hawkes gives us a script that downloads the files and tests for new coverage in the program.
 But the problem here is i can't compile the target program myself since i dont have access to source code.
-So if you are working with grey-box binaries WinAFL has great python script to minimize corpus.
+So if you are working with grey-box binaries, WinAFL has great python script to minimize corpus.
 Of course before that we have to download the files to use in corpus minimization so you can use corpus_creator.py.
 Dont forget to download dependencies.
 
