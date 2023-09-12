@@ -33,7 +33,7 @@ At the end of the blogpost Ben Hawkes gives us a script that downloads the files
 But the problem here is i can't compile the target program myself since i dont have access to source code.
 So if you are working with grey-box binaries, WinAFL has great python script to minimize corpus.
 Of course before that we have to download the files to use in corpus minimization so you can use corpus_creator.py.
-Dont forget to download dependencies.
+Dont forget to install dependencies first.
 
 Have a good day.
 
