@@ -1,6 +1,7 @@
 import boto3
 import warcio
 import csv
+import os
 
 # ALL YOU HAVE TO DO IS FILLING HERE #
 ACCESS_KEY = ''
@@ -10,10 +11,12 @@ CSV_FILENAME=''
 # ----------- #
 
 s3 = boto3.Session().client('s3', aws_access_key_id=ACCESS_KEY, aws_secret_access_key=SECRET_KEY)
+a = 1
+outputfolder = 'output'
+os.mkdir(outputfolder)
 with open(CSV_FILENAME) as file_obj:
     heading = next(file_obj)
     reader_obj = csv.reader(file_obj)
-    a = 1
     for row in reader_obj:
         warc_filename = row[1]
         warc_record_offset= int(row[2])
@@ -23,7 +26,7 @@ with open(CSV_FILENAME) as file_obj:
         stream = obj['Body']
         record = next(warcio.ArchiveIterator(stream))
         file_data = record.content_stream().read()
-        file_to_write= str(a) + FILE_EXTENSION
+        file_to_write= os.path.join(outputfolder,str(a)+FILE_EXTENSION)
         filem=open(file_to_write,'wb')
         filem.write(file_data)
         filem.close()
