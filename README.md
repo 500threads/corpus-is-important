@@ -35,7 +35,8 @@ So if you are working with grey-box binaries, WinAFL has great python script to 
 Of course before that we have to download the files to use in corpus minimization so you can use corpus_creator.py.
 Dont forget to install dependencies first.
 
-Have a good day.
-
-
-
+## working with grey-box binary in windows? here is the steps:
+1-Read the blog above, do the instructions.
+2-Download the CSV output.
+3-Execute the corpus_creator.py
+4-Use https://github.com/googleprojectzero/winafl/blob/master/winafl-cmin.py to minimize corpus. That's it.
