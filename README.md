@@ -36,7 +36,7 @@ Of course before that we have to download the files to use in corpus minimizatio
 Dont forget to install dependencies first.
 
 ## working with grey-box binary in windows? here are the steps:
-1-Read the blog above, do the instructions.\n
-2-Download the CSV output.\n
-3-Execute the corpus_creator.py\n
+1-Read the blog above, do the instructions.
+2-Download the CSV output.
+3-Execute the corpus_creator.py
 4-Use https://github.com/googleprojectzero/winafl/blob/master/winafl-cmin.py to minimize corpus. That's it.
