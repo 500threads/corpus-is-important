@@ -14,7 +14,7 @@ s3 = boto3.Session().client('s3', aws_access_key_id=ACCESS_KEY, aws_secret_acces
 a = 1
 outputfolder = 'output'
 os.mkdir(outputfolder)
-with open(CSV_FILENAME) as file_obj:
+with open(CSV_FILENAME,encoding='utf-8') as file_obj:
     heading = next(file_obj)
     reader_obj = csv.reader(file_obj)
     for row in reader_obj:
