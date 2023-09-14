@@ -20,7 +20,7 @@ So the method i used here is finding urls with ending ".dgn" and eliminating tho
 ```
 SELECT url, warc_filename, warc_record_offset, warc_record_length
 FROM ccindex.ccindex WHERE (crawl = 'CC-MAIN-2023-06')
-AND subset = 'warc' AND url LIKE '%.dgn' AND ((content_mime_type = 'application/dgn' OR content_mime_type = 'application/dgn' OR content_mime_type = 'application/octet-stream' OR content_mime_type = 'octet/stream' OR content_mime_type = 'image/vnd.dgn' OR content_mime_type = 'image/x-dgn')
+AND subset = 'warc' AND url LIKE '%.dgn' AND (content_mime_type = 'application/dgn' OR content_mime_type = 'application/dgn' OR content_mime_type = 'application/octet-stream' OR content_mime_type = 'octet/stream' OR content_mime_type = 'image/vnd.dgn' OR content_mime_type = 'image/x-dgn')
 ```
 
 ## download the csv
