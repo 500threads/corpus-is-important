@@ -15,12 +15,12 @@ AND subset = 'warc' AND content_mime_detected = 'application/pdf';
 
 In my current research i have to find a corpus with DGN files but the content mime is not "application/dgn" it is "application/octet-stream".
 But we cant find DGN files this way right?
-So the method i used here is finding urls with ending ".dgn". Here is example query:
+So the method i used here is finding urls with ending ".dgn" and eliminating those are not ".dgn" with content_mime_type not content_mime_detected. Here is example query:
 
 ```
 SELECT url, warc_filename, warc_record_offset, warc_record_length
 FROM ccindex.ccindex WHERE (crawl = 'CC-MAIN-2023-06')
-AND subset = 'warc' AND url LIKE '%.dgn'
+AND subset = 'warc' AND url LIKE '%.dgn' AND ((content_mime_type = 'application/dgn' OR content_mime_type = 'application/dgn' OR content_mime_type = 'application/octet-stream' OR content_mime_type = 'octet/stream' OR content_mime_type = 'image/vnd.dgn' OR content_mime_type = 'image/x-dgn')
 ```
 
 ## download the csv
